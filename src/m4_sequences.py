@@ -141,6 +141,14 @@ def practice_problem4a(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 minutes.
     ####################################################################
+    z=[]
+    for k in range(len(sequence)-1):
+        if sequence[k] == sequence[k + 1]:
+            z = z + [k]
+    return z
+
+
+
 
 
 def run_test_practice_problem4b():
@@ -204,6 +212,12 @@ def practice_problem4b(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+    largest_number=sequence[0]
+    for k in range(0, len(sequence), 2):
+        if sequence[k]>largest_number:
+            largest_number=sequence[k]
+    return largest_number
+
 
 
 def run_test_practice_problem4c():
@@ -307,6 +321,17 @@ def practice_problem4c(points):
     #    TIME ESTIMATE:   15 minutes.
     ####################################################################
 
+    for k in range(len(points)):
+        if is_prime(points[k].x) and is_prime(points[k].y)is True :
+            original_x=points[k].x
+            original_y=points[k].y
+            points[k].x=original_y
+            points[k].y=original_x
+            return points[k]
+    return 'Not found'
+
+
+
 
 def run_test_practice_problem4d():
     """ Tests the    practice_problem4d    function. """
@@ -398,6 +423,13 @@ def practice_problem4d(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 minutes.
     ####################################################################
+    sum = 0
+    for k in range(len(sequence)-1):
+        if is_prime(sequence[k]) and is_prime(sequence[k+1]) is True and sequence[k] != sequence[k+1]:
+            sum=sum+sequence[k]
+    return sum
+
+
 
 
 # ----------------------------------------------------------------------

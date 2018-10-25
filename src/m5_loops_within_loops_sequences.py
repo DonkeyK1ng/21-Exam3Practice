@@ -118,6 +118,16 @@ def integers(sequence_of_sequences):
     #    DIFFICULTY:      6
     #    TIME ESTIMATE:  10 minutes.
     # ------------------------------------------------------------------
+    new_list=[]
+    for index_of_entire_sequence in range(len(sequence_of_sequences)):
+        sub_sequence_at_current_index = sequence_of_sequences[index_of_entire_sequence]
+        for index_of_sub_sequence in range(len(sub_sequence_at_current_index)):
+            current_item_in_sub_sequence = sub_sequence_at_current_index[index_of_sub_sequence]
+            if type(current_item_in_sub_sequence) is int:
+                new_list.append(current_item_in_sub_sequence)
+    return new_list
+
+
 
 
 def run_test_big_letters():
@@ -211,6 +221,14 @@ def big_letters(sequence_of_sequences):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  12 minutes.
     # ------------------------------------------------------------------
+    new_list=""
+    for index_of_all_sequence in range(len(sequence_of_sequences)):
+        if type(sequence_of_sequences[index_of_all_sequence])is str:
+            for letter in range(len(sequence_of_sequences[index_of_all_sequence])):
+                current_string = sequence_of_sequences[index_of_all_sequence]
+                if current_string[letter].isupper() is True:
+                    new_list=new_list + current_string[letter]
+    return new_list
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

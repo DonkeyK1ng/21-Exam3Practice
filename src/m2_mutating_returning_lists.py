@@ -110,6 +110,19 @@ def doubler(list1, list2):
     #    DIFFICULTY:      4
     #    TIME ESTIMATE:   5 minutes.
     # ------------------------------------------------------------------
+    z=[]
+    for k in range(len(list1)):
+        list1[k]=list1[k]*2
+    for i in range(len(list2)):
+        z.append(list2[i]*2)
+    return z
+
+
+
+
+
+
+
 
 
 # ----------------------------------------------------------------------
